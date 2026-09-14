@@ -188,6 +188,43 @@
             font-size: 1rem;
             color: var(--text-muted);
         }
+
+        /* Social Media Links */
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .social-link:hover {
+            border-color: var(--accent-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 74, 125, 0.3);
+        }
+
+        .whatsapp-link {
+            color: #25d366;
+        }
+
+        .instagram-link {
+            color: #e4405f;
+        }
     </style>
 </head>
 <body>
@@ -307,3 +344,28 @@
                 <div class="item-price">€25</div>
             </div>
         </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-card">
+        <h2>Get in Touch</h2>
+        <p>Ready to order? Contact me directly via WhatsApp or Instagram to discuss your request and arrange payment.</p>
+        
+        <div class="social-links">
+            <a href="https://wa.me/32489920534" class="social-link whatsapp-link" target="_blank">
+                💬 WhatsApp: +32 489 92 05 34
+            </a>
+            <a href="https://instagram.com/worn_by_me7" class="social-link instagram-link" target="_blank">
+                📷 Instagram: @worn_by_me7
+            </a>
+        </div>
+
+        <div class="alternative-contact">
+            <p>💳 Payment methods and shipping details will be discussed upon contact.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

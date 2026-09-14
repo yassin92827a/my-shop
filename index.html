@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Exclusive Content & Items</title>
+    <style>
+        :root {
+            --bg-color: #0d0d11;
+            --card-bg: #16161f;
+            --accent-pink: #ff4a7d;
+            --accent-purple: #9b51e0;
+            --text-main: #ffffff;
+            --text-muted: #a0a0b0;
+            --border-color: #252538;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        /* 18+ Warning Banner */
+        .age-restriction {
+            background: linear-gradient(135deg, #721c24, #c82333);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(200, 35, 51, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--accent-pink), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Section Styling */
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            color: var(--accent-pink);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Menu Items */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        @media (min-width: 600px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .menu-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-pink);
+        }
+
+        .item-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.15rem;
+        }
+
+        .item-info p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .item-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2ecc71;
+            margin-top: 15px;
+            text-align: right;
+        }
+
+        /* Notes / Credits Box */
+        .info-box {
+            background-color: rgba(155, 81, 224, 0.1);
+            border-left: 4px solid var(--accent-purple);
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 40px;
+        }
+
+        .info-box h4 {
+            margin: 0 0 5px 0;
+            color: var(--accent-purple);
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: linear-gradient(145deg, #1e1e2f, #16161f);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .contact-card h2 {
+            margin-top: 0;
+            color: var(--accent-pink);
+        }
+
+        .contact-card p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--accent-pink), var(--accent-purple));
+            color: white;
+            text-decoration: none;
+            padding: 12px 35px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(255, 74, 125, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(255, 74, 125, 0.6);
+        }
+
+        .alternative-contact {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 18+ Disclaimer -->
+    <div class="age-restriction">
+        🔞 STRICTLY 18+ ONLY. By browsing this page, you confirm you are of legal adult age.
+    </div>
+
+    <header>
+        <h1>Welcome to My Menu</h1>
+        <p>Explore my personal collection of premium content, physical items, and custom experiences. Read the options below and message me directly to place your order.</p>
+    </header>
+
+    <!-- Category: Digital Content -->
+    <div class="category-section">
+        <div class="category-title">Digital Content</div>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Lingerie Photo</h3>
+                    <p>High-quality, exclusive photo featuring beautiful lingerie sets.</p>
+                </div>
+                <div class="item-price">€5</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Nude Photo</h3>
+                    <p>Exclusive, high-quality private photo selection.</p>
+                </div>
+                <div class="item-price">€7</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Lingerie Video</h3>
+                    <p>Short exclusive video clip showcasing aesthetic lingerie styling.</p>
+                </div>
+                <div class="item-price">€8</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Nude Video</h3>
+                    <p>Exclusive fully uncensored video clip content.</p>
+                </div>
+                <div class="item-price">€12</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Foot Photo</h3>
+                    <p>Dedicated high-definition photo for foot enthusiasts.</p>
+                </div>
+                <div class="item-price">€6</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Personal Audio Message</h3>
+                    <p>A custom audio clip tailored specifically to you. Say anything you'd like.</p>
+                </div>
+                <div class="item-price">€5</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category: Custom & Live -->
+    <div class="category-section">
+        <div class="category-title">Custom Requests &amp; Live Interaction</div>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Custom Video (Up to 1 Min)</h3>
+                    <p>A personalized video made to your specific requests.</p>
+                </div>
+                <div class="item-price">€20</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Custom Video (1–2 Mins)</h3>
+                    <p>Extended personalized video content tailored to your guidelines.</p>
+                </div>
+                <div class="item-price">€25</div>
+            </div>
+            <div class="menu-item" style="grid-column: 1 / -1;">
+                <div class="item-info">
+                    <h3>1-on-1 Live Call (10 Mins)</h3>
+                    <p>Private, real-time interactive live video call session just for us.</p>
+                </div>
+                <div class="item-price">€30</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category: Physical Items -->
+    <div class="category-section">
+        <div class="category-title">Physical Items</div>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Worn Socks</h3>
+                    <p>Personally worn socks shipped discretely directly to you.</p>
+                </div>
+                <div class="item-price">€10</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <h3>Worn Lingerie</h3>
+                    <p>An item of my personal collection worn by me before shipping.</p>
+                </div>
+                <div class="item-price">€20</div>
+            </div>
+            <div class="menu-item" style="grid-column: 1 / -1;">
+                <div class="item-info">
+                    <h3>Worn Item of Your Choice</h3>
+                    <p>Pick a specific clothing item or accessory for me to wear and send to you.</p>
+                </div>
+                <div class="item-price">€25</div>
+            </div>
+        </div>

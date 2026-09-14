@@ -99,6 +99,7 @@
             flex-direction: column;
             justify-content: space-between;
             transition: transform 0.2s, border-color 0.2s;
+            min-height: 180px;
         }
 
         .menu-item:hover {
@@ -109,12 +110,14 @@
         .item-info h3 {
             margin: 0 0 5px 0;
             font-size: 1.15rem;
+            font-weight: 600;
         }
 
         .item-info p {
             margin: 0;
             color: var(--text-muted);
             font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         .item-price {
@@ -125,73 +128,31 @@
             text-align: right;
         }
 
-        /* Notes / Credits Box */
-        .info-box {
-            background-color: rgba(155, 81, 224, 0.1);
-            border-left: 4px solid var(--accent-purple);
-            border-radius: 4px;
-            padding: 15px;
-            margin-bottom: 40px;
-        }
-
-        .info-box h4 {
-            margin: 0 0 5px 0;
-            color: var(--accent-purple);
-        }
-
-        .info-box p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
         /* Contact Section */
         .contact-card {
-            background: linear-gradient(145deg, #1e1e2f, #16161f);
+            background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: none;
         }
 
         .contact-card h2 {
             margin-top: 0;
+            margin-bottom: 10px;
             color: var(--accent-pink);
+            font-size: 1.4rem;
         }
 
         .contact-card p {
             color: var(--text-muted);
-            margin-bottom: 25px;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            background: linear-gradient(to right, var(--accent-pink), var(--accent-purple));
-            color: white;
-            text-decoration: none;
-            padding: 12px 35px;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(255, 74, 125, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .contact-btn:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 20px rgba(255, 74, 125, 0.6);
-        }
-
-        .alternative-contact {
-            margin-top: 20px;
-            font-size: 1rem;
-            color: var(--text-muted);
+            margin: 0 0 15px 0;
+            font-size: 0.95rem;
         }
 
         /* Social Media Links */
         .social-links {
-            margin-top: 25px;
+            margin: 20px 0;
             display: flex;
             gap: 15px;
             justify-content: center;
@@ -202,13 +163,14 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 20px;
+            padding: 12px 20px;
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 10px;
             color: var(--text-main);
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.95rem;
             transition: all 0.2s;
         }
 
@@ -224,6 +186,16 @@
 
         .instagram-link {
             color: #e4405f;
+        }
+
+        .alternative-contact {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .alternative-contact p {
+            margin: 0;
         }
     </style>
 </head>
@@ -308,7 +280,7 @@
                 </div>
                 <div class="item-price">€25</div>
             </div>
-            <div class="menu-item" style="grid-column: 1 / -1;">
+            <div class="menu-item">
                 <div class="item-info">
                     <h3>1-on-1 Live Call (10 Mins)</h3>
                     <p>Private, real-time interactive live video call session just for us.</p>
@@ -336,7 +308,7 @@
                 </div>
                 <div class="item-price">€20</div>
             </div>
-            <div class="menu-item" style="grid-column: 1 / -1;">
+            <div class="menu-item">
                 <div class="item-info">
                     <h3>Worn Item of Your Choice</h3>
                     <p>Pick a specific clothing item or accessory for me to wear and send to you.</p>
